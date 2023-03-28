@@ -1,0 +1,8 @@
+<h1>Et coucou</h1>
+
+<%= link_to 'Creer liste', new_list_path %>
+
+<% @lists.each do |list| %>
+  <p><%= link_to list.name, list_path(list.id) %></p>
+  <p><%= link_to 'Review', new_list_bookmark_path(list.id) %></p>
+<% end %>
